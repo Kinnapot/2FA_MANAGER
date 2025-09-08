@@ -32,3 +32,6 @@ docker-compose.override.yml
 # Data
 database/
 
+# .env
+.env
+
