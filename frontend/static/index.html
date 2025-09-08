@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2FA Manager</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header><h1>2FA Manager</h1></header>
+    <main>
+      <section class="form">
+        <label>Username<input id="in-username" type="text" /></label>
+        <label>Password<input id="in-password" type="text" /></label>
+        <label>Secret Key<input id="in-secret" type="text" /></label>
+        <label>Note<input id="in-note" type="text" /></label>
+        <label>Digits<input id="in-digits" type="number" value="6" min="6" max="8" /></label>
+        <label>Period<input id="in-period" type="number" value="30" min="15" max="60" /></label>
+        <div class="actions">
+          <button id="btn-confirm">Confirm</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>List</h2>
+        <table class="accounts">
+          <thead>
+            <tr><th>เลือก</th><th>Username</th><th>Password</th><th>Secret</th><th>Note</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>ผลลัพธ์</h2>
+        <div id="otp-output">ยังไม่ได้ genotp</div>
+      </section>
+
+      <section class="bottom">
+        <button id="btn-get-otp">Getotp</button>
+        <button id="btn-copy-otp">copy otp</button>
+        <button id="btn-copy-user">copy user</button>
+        <button id="btn-copy-password">copy password</button>
+        <button id="btn-copy-secret">copy secret key</button>
+      </section>
+    </main>
+    <footer><small>Create by : Dapper</small></footer>
+    <script src="/main.js"></script>
+  </body>
+ </html>
+
