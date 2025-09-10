@@ -1,4 +1,5 @@
-const API = 'http://localhost:8000';
+// Use same-origin; nginx will proxy /api -> backend
+const API = '';
 let ACCOUNTS = [];
 let SELECTED = null;
 let LAST_OTP = '';
@@ -89,4 +90,3 @@ window.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('btn-copy-secret').addEventListener('click', copySecret);
   refresh();
 });
-

@@ -28,9 +28,15 @@ cp .env.example .env
 ```bash
 docker compose up -d
 ```
-3) เปิดเว็บ
+3) เปิดเว็บ (ค่าเริ่มต้น)
 - Frontend: http://localhost:8080
 - Backend API: http://localhost:8000
+
+ปรับพอร์ตผ่าน `.env`
+- กำหนดพอร์ตฝั่งโฮสต์ได้ในไฟล์ `.env` (ดูตัวอย่างใน `env.example`)
+  - `FRONTEND_PORT` (ดีฟอลต์ 8080)
+  - `BACKEND_PORT`  (ดีฟอลต์ 8000)
+  จากนั้น `docker compose up -d` จะผูกพอร์ตตามที่ตั้งไว้ และ UI จะเรียก API ผ่านเส้นทาง `/api` บนโดเมน/พอร์ตเดียวกัน
 
 API หลัก (ย่อ)
 - GET /api/accounts
